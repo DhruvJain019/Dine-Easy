@@ -14,7 +14,13 @@ const checkJwt = auth({
   issuerBaseURL: 'https://dev-4xodr7e0fq238q7z.us.auth0.com/',
   tokenSigningAlg: 'RS256'
 });
-app.use(cors());
+app.use(cors(
+  {
+    origin : ["https://dine-easy-backend.vercel.app/"],
+    methods:["POST","GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 app.get("/restaurants", async (request, response) => {
