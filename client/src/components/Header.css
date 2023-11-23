@@ -1,0 +1,165 @@
+header {
+  height: 20rem;
+  background-image: url("../images/header_s.jpg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  z-index: -1;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 3fr;
+  padding-bottom: 0;
+  height: 20rem;
+}
+header ul {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  max-height: 3rem;
+}
+header li {
+  padding-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header li a {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  align-items: center;
+  justify-content: center;
+}
+.item-eats {
+  font-size: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-left: 0;
+}
+.item-reservations {
+  font-size: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.user-login {
+  padding-left: 0.5rem;
+  text-align: center;
+  /* grid-column-start: 3/-1;
+  grid-row-start: 1/2; */
+
+  /* margin-top: 0.5rem; */
+}
+.logo {
+  max-width: 3.5rem;
+  /* padding: 0.5rem; */
+  margin-left: 1.5rem;
+  padding-bottom: 0;
+  grid-column-start: 1/2;
+  grid-row-start: 1/2;
+  box-shadow: 0 0.25rem 0.6rem 0 rgb(66, 65, 65);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  /* border-radius: 0.3rem; */
+}
+.culinary {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: -1;
+  width: 100%;
+  justify-self: center;
+  align-items: center;
+}
+.textCulinary {
+  color: white;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.241);
+  text-shadow: 0px 4px 4px rgb(0, 0, 0);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: 400;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 48rem) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0.375);
+    /* padding-bottom: 1rem; */
+    /* margin-right: 2rem; */
+    width: 25rem;
+  }
+  .nav-link {
+    color: white;
+    font-size: 0.8rem;
+  }
+  .item-eats {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0.5rem;
+  }
+  .item-reservations {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 0.5rem;
+  }
+  .user-login {
+    grid-column: 3/-1;
+    text-align: right;
+    width: 2.5rem;
+  }
+
+  .button-login img {
+    background-color: rgb(56, 55, 55);
+    border-radius: 5rem;
+    border-width: 0.1rem;
+  }
+  .logo {
+    display: none;
+  }
+  .header .container {
+    display: grid;
+    grid-template-columns: 10rem auto;
+    align-items: center;
+    max-width: 50rem;
+  }
+  header {
+    background-image: url("../images/header_l.jpg");
+    background-size: 100%;
+
+    /* box-shadow: 0 0.25rem 0.6rem 0 gray; */
+  }
+  header li {
+    display: block;
+  }
+  .header-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    /* align-items: center; */
+  }
+  header li a {
+    color: #5a9ace;
+    font-size: 1.3rem;
+  }
+
+  /* .logo {
+    margin-top: 1rem;
+    max-width: 4.5rem;
+  } */
+  .nav {
+    justify-content: end;
+    align-items: center;
+  }
+  .nav-item {
+    margin-left: 1rem;
+  }
+  .textCulinary {
+    background-color: rgba(11, 11, 11, 0.5);
+  }
+}
